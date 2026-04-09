@@ -5,16 +5,16 @@ function HeroSection() {
   return (
     <section className="flex items-center h-screen ">
       <div className="md:space-y-7 space-y-4 text-center sm:text-left">
-        <h2 className="font-medium sm:text-xl mb-1 text-text-muted text-[16px] animate__animated  animate__fadeIn animate__delay-2s">
+        <h2 className="font-medium sm:text-xl mb-5 text-text-muted text-[16px] animate__animated  animate__fadeIn animate__delay-2s">
           Hi, my name is
         </h2>
         <h1
-          className="font-black title font-body tracking-tighter animate__animated animate__fadeInLeft animate__slower
+          className="font-black title font-body  animate__animated animate__fadeInLeft animate__slower
 "
         >
           Tin Htun Oo
         </h1>
-        <h1 className="font-black title-2 font-body text-accent tracking-tighter animate__animated animate__fadeInRight animate__slower">
+        <h1 className="font-black title-2 font-body text-accent animate__animated animate__fadeInRight animate__slower">
           Front-End Developer
         </h1>
         <p className="font-normal sm:text-[18px] max-w-2xl text-text-muted leading-6 text-[14px] animate__animated  animate__fadeIn animate__delay-2s">
