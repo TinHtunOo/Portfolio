@@ -7,7 +7,7 @@
   --color-text-2: #b6bcc6;
   --color-bg-2: #f5f5f7;
   --color-accent: #d0992e;
-  --font-body: "Inter_Tight", sans-serif;
+  --font-body: var(--font-inter_tight), sans-serif;
 }
 
 html,
