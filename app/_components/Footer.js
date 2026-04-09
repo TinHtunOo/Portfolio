@@ -13,6 +13,7 @@ function Footer() {
             <div className="flex md:gap-20 gap-5 my-10 flex-wrap">
               <Link
                 href="https://github.com/TinHtunOo"
+                target="_blank"
                 className="hover:underline"
               >
                 <span className="flex items-center uppercase ">
