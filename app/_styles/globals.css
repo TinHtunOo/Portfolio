@@ -1,7 +1,5 @@
 @import "tailwindcss";
 
-/* Import Inter Tight */
-
 @theme {
   --color-bg: #ffffff;
   --color-text: #030712;

@@ -9,12 +9,12 @@ function HeroSection() {
           Hi, my name is
         </h2>
         <h1
-          className="font-black title  tracking-tighter animate__animated animate__fadeInLeft animate__slower
+          className="font-black title font-body tracking-tighter animate__animated animate__fadeInLeft animate__slower
 "
         >
           Tin Htun Oo
         </h1>
-        <h1 className="font-black title-2 text-accent tracking-tighter animate__animated animate__fadeInRight animate__slower">
+        <h1 className="font-black title-2 font-body text-accent tracking-tighter animate__animated animate__fadeInRight animate__slower">
           Front-End Developer
         </h1>
         <p className="font-normal sm:text-[18px] max-w-2xl text-text-muted leading-6 text-[14px] animate__animated  animate__fadeIn animate__delay-2s">
