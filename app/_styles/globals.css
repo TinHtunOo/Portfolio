@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+/* Import Inter Tight */
+
+@theme {
+  --color-bg: #ffffff;
+  --color-text: #030712;
+  --color-text-muted: #374152;
+  --color-text-2: #b6bcc6;
+  --color-bg-2: #f5f5f7;
+  --color-accent: #d0992e;
+  --font-body: "Inter_Tight", sans-serif;
+}
+
+html,
+body {
+  @apply font-body bg-bg text-text;
+  box-sizing: border-box;
+}
+
+.line {
+  cursor: pointer;
+  position: relative;
+}
+
+.line:after {
+  content: "";
+  position: absolute;
+  background-color: var(--color-accent);
+  width: 0;
+  height: 2px;
+  bottom: 0px;
+  right: 0;
+  transition: width 0.5s ease-out;
+}
+
+.line:hover:after {
+  left: 0;
+  width: 100%;
+  color: var(--color-text);
+}
+
+.title {
+  font-size: clamp(2.5rem, 5vw + 3vh, 6rem);
+  line-height: clamp(1rem, 3vw + 3vh, 4rem);
+}
+
+.title-2 {
+  font-size: clamp(0.5rem, 5vw + 3vh, 6rem);
+  line-height: clamp(1rem, 3vw + 3vh, 4rem);
+}
+
+.animate__animated.project_card {
+  --animate-delay: 0.5s;
+}
+
+.animate__animated.timeline {
+  --animate-delay: 0.5s;
+}
