@@ -53,9 +53,10 @@ function AboutMeSection() {
           <p className=" text-text-muted md:text-lg text-base ">
             I am <span className="text-accent">Tin Htun Oo,</span> a Front-End
             Developer with a <span className="text-accent">Mechatronics</span>{" "}
-            background from TU(Hmawbi). My journey in programming began with{" "}
-            <span className="text-accent">Python,</span> and over time I found
-            myself passionate about building things for the web.
+            background from Technological University(Hmawbi). My journey in
+            programming began with <span className="text-accent">Python,</span>{" "}
+            and over time I found myself passionate about building things for
+            the web.
             <br />
             <br />I pursued the <span className="text-accent">NCC</span> IT
             pathway to expand my skills and move towards a{" "}
