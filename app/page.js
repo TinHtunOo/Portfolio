@@ -3,6 +3,7 @@ import Footer from "./_components/Footer";
 import HeroSection from "./_components/HeroSection";
 import JourneySection from "./_components/JourneySection";
 import ProjectsSection from "./_components/ProjectsSection";
+import SomeWorkSection from "./_components/SomeWorkSection";
 
 export default function Home() {
   return (
@@ -10,7 +11,7 @@ export default function Home() {
       <HeroSection />
       <AboutMeSection />
       <ProjectsSection />
-      {/* <SomeWorkSection /> */}
+      <SomeWorkSection />
       <JourneySection />
       <Footer />
     </div>
