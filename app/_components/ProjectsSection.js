@@ -5,6 +5,7 @@ import Project_1 from "./Project_1";
 import Project_2 from "./Project_2";
 import Project_3 from "./Project_3";
 import Project_4 from "./Project_4";
+import Project_5 from "./Project_5";
 
 function ProjectsSection() {
   const { ref, visible } = useInView();
@@ -27,6 +28,8 @@ function ProjectsSection() {
       <Project_3 />
       <div className="h-23"></div>
       <Project_4 />
+      <div className="h-23"></div>
+      <Project_5 />
     </div>
   );
 }
