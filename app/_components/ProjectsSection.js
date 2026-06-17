@@ -12,13 +12,17 @@ function ProjectsSection() {
 
   return (
     <div ref={ref} id="project" className="pt-15 pb-15">
-      <h1
-        className={`text-3xl font-bold mb-10 sm:text-left text-center animate__animated  ${
-          visible ? "animate__fadeIn " : "opacity-0"
-        }`}
-      >
-        Projects
-      </h1>
+      <div className="mb-12">
+        <h1
+          className={`text-3xl font-bold sm:text-left text-center animate__animated  ${
+            visible ? "animate__fadeIn " : "opacity-0"
+          }`}
+        >
+          Projects
+        </h1>
+        <div className="mt-4 h-px w-16 bg-accent rounded-full" />
+      </div>
+
       {/* image left */}
 
       <Project_1 />
@@ -28,8 +32,8 @@ function ProjectsSection() {
       <Project_3 />
       <div className="h-23"></div>
       <Project_4 />
-      <div className="h-23"></div>
-      <Project_5 />
+      {/* <div className="h-23"></div>
+      <Project_5 /> */}
     </div>
   );
 }

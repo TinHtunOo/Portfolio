@@ -24,13 +24,17 @@ function AboutMeSection() {
 
   return (
     <div ref={ref} id="about_me" className="pt-15 pb-15">
-      <h1
-        className={`text-3xl mb-10  flex-1 whitespace-nowrap font-bold sm:text-left text-center  animate__animated  ${
-          visible ? "animate__fadeIn " : "opacity-0"
-        }`}
-      >
-        About Me
-      </h1>
+      <div className="mb-12">
+        <h1
+          className={`text-3xl  flex-1 whitespace-nowrap font-bold sm:text-left text-center  animate__animated  ${
+            visible ? "animate__fadeIn " : "opacity-0"
+          }`}
+        >
+          About Me
+        </h1>
+        <div className="mt-4 h-px w-16 bg-accent rounded-full" />
+      </div>
+
       <div className="flex gap-15 items-center justify-center md:flex-nowrap flex-wrap">
         <figure
           className={`min-w-75  md:aspect-auto aspect-square  h-auto overflow-hidden rounded-2xl animate__animated ${

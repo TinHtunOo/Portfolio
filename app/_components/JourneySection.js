@@ -6,13 +6,16 @@ function JourneySection() {
 
   return (
     <div ref={ref} id="journey" className="pt-15 pb-15">
-      <h1
-        className={`text-3xl font-bold mb-10 sm:text-left text-center animate__animated ${
-          visible ? "animate__fadeIn " : "opacity-0"
-        }`}
-      >
-        Journey
-      </h1>
+      <div className="mb-12">
+        <h1
+          className={`text-3xl font-bold  sm:text-left text-center animate__animated ${
+            visible ? "animate__fadeIn " : "opacity-0"
+          }`}
+        >
+          Journey
+        </h1>
+        <div className="mt-4 h-px w-16 bg-accent rounded-full" />
+      </div>
       <div
         className={` hidden sm:grid grid-cols-5 grid-rows-2  text-[14px] animate__animated timeline ${
           visible ? "animate__fadeIn animate__delay-1s" : "opacity-0"

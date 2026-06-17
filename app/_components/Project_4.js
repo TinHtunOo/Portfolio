@@ -31,7 +31,7 @@ function Project_4() {
         }`}
       >
         <h2 className="text-text md:text-[22px] text-[18px]  md:max-w-2xs ">
-          Myanmar Heritage Fashion E-Commerce{" "}
+          Myanmar Heritage Fashion E-Commerce (With ChatBot)
         </h2>
         <p className="md:bg-bg-2 max-w-125 text-[14px] md:text-base md:border border-text-2 md:p-5 md:rounded-3xl shadow-none md:shadow-lg ">
           A <span className="text-accent">full-stack e-commerce platform </span>
