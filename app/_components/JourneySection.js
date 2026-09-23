@@ -1,142 +1,88 @@
 "use client";
 import useInView from "../_hooks/useInView";
+import SectionHeading from "./SectionHeading";
+
+const timeline = [
+  {
+    year: "2019",
+    title: "Finished Mechatronics Engineering",
+    place: "Technological University (Hmawbi)",
+  },
+  {
+    year: "2021",
+    title: "Learned Python & Programming Basics",
+    place: "Self-driven learning",
+  },
+  {
+    year: "2023",
+    title: "Began NCC Education for Computing Degree",
+    place: "NCC Education",
+  },
+  {
+    year: "2025",
+    title: "Finished Level 5 Diploma in Computing",
+    place: "NCC Education",
+  },
+];
 
 function JourneySection() {
   const { ref, visible } = useInView();
 
   return (
-    <div ref={ref} id="journey" className="pt-15 pb-15">
-      <div className="mb-12">
-        <h1
-          className={`text-3xl font-bold  sm:text-left text-center animate__animated ${
-            visible ? "animate__fadeIn " : "opacity-0"
-          }`}
-        >
-          Journey
-        </h1>
-        <div className="mt-4 h-px w-16 bg-accent rounded-full" />
-      </div>
-      <div
-        className={` hidden sm:grid grid-cols-5 grid-rows-2  text-[14px] animate__animated timeline ${
-          visible ? "animate__fadeIn animate__delay-1s" : "opacity-0"
-        }`}
-      >
-        <div className="border-r border-b border-text-2  h-40 flex items-center justify-end text-right p-2 relative">
-          <span
-            className={`animate__animated timeline ${
-              visible ? "animate__fadeIn animate__delay-2s" : "spacity-0"
-            }`}
-          >
-            Finished Mechatronics Engineering at TU(Hmawbi)
-          </span>
-          <div className="absolute w-2 h-2 rounded-4xl bg-text top-0 -right-1"></div>
-          <div className="absolute w-2 h-2 rounded-4xl bg-text -bottom-1 -right-1"></div>
-          <div className="absolute w-2 h-2 rounded-4xl bg-text -bottom-1 -left-1"></div>
-        </div>
-        <div className="border-b border-text-2  h-40 p-2 text-2xl font-semibold">
-          <span
-            className={`animate__animated timeline text-accent ${
-              visible ? "animate__fadeIn animate__delay-2s" : "spacity-0"
-            }`}
-          >
-            2019
-          </span>
-        </div>
-        <div className="border-b border-r border-text-2  h-40 flex items-center justify-end text-right p-2 relative">
-          <span
-            className={`animate__animated timeline ${
-              visible ? "animate__fadeIn animate__delay-4s" : "spacity-0"
-            }`}
-          >
-            Began NCC Education for Computing Degree
-          </span>
-          <div className="absolute w-2 h-2 rounded-4xl bg-text top-0 -right-1"></div>
-          <div className="absolute w-2 h-2 rounded-4xl bg-text -bottom-1 -right-1"></div>
-          <div className="absolute w-2 h-2 rounded-4xl bg-text -bottom-1 -left-1 z-5"></div>
-        </div>
-        <div className="border-b  border-text-2  h-40 p-2 text-2xl font-semibold">
-          <span
-            className={`animate__animated timeline text-accent ${
-              visible ? "animate__fadeIn animate__delay-4s" : "spacity-0"
-            }`}
-          >
-            2023
-          </span>
-        </div>
-        <div className="border-b  border-text-2  h-40"></div>
-        <div className=" border-text-2  h-40"></div>
-        <div className=" border-r border-text-2  h-40 flex items-center justify-end text-right p-2 relative">
-          <span
-            className={`animate__animated timeline ${
-              visible ? "animate__fadeIn animate__delay-3s" : "spacity-0"
-            }`}
-          >
-            Learned Python & programming basics{" "}
-          </span>
-          <div className="absolute w-2 h-2 rounded-4xl bg-text bottom-0 -right-1"></div>
-        </div>{" "}
-        <div className=" border-text-2  h-40 p-2 text-2xl font-semibold flex items-end">
-          <span
-            className={`animate__animated timeline text-accent ${
-              visible ? "animate__fadeIn animate__delay-3s" : "spacity-0"
-            }`}
-          >
-            2021
-          </span>
-        </div>
-        <div className="border-r border-text-2  h-40 flex items-center justify-end text-right p-2 relative">
-          <span
-            className={`animate__animated timeline ${
-              visible ? "animate__fadeIn animate__delay-5s" : "spacity-0"
-            }`}
-          >
-            Finished Level 5 Diploma in Computing
-          </span>
-        </div>
-        <div className=" border-text-2  h-40 p-2 text-2xl font-semibold flex items-end relative">
-          <span
-            className={`animate__animated timeline text-accent ${
-              visible ? "animate__fadeIn animate__delay-5s" : "spacity-0"
-            }`}
-          >
-            2025
-          </span>
-          <div className="absolute w-2 h-2 rounded-4xl bg-text -top-1 -left-1"></div>
-          <div className="absolute w-2 h-2 rounded-4xl bg-text -top-1 -right-1"></div>
-          <div className="absolute w-2 h-2 rounded-4xl bg-text -bottom-1 -left-1 z-5"></div>
-        </div>
-      </div>
-      {/* Mobile timeline */}
-      <div className=" sm:hidden grid grid-cols-3 grid-rows-4  text-[14px]">
-        <div className=" border-r text-accent relative border-text-2 h-30 flex items-center justify-end p-3 text-2xl font-semibold">
-          2019
-          <div className="w-2 h-2 bg-text rounded-3xl absolute -right-1"></div>
-        </div>
-        <div className="col-span-2 p-3 flex items-center">
-          {" "}
-          Finished Mechatronics Engineering at TU(Hmawbi)
-        </div>
-        <div className=" border-r text-accent relative border-text-2 h-30 flex items-center justify-end p-3 text-2xl font-semibold">
-          2021
-          <div className="w-2 h-2 bg-text rounded-3xl absolute -right-1"></div>
-        </div>
-        <div className="col-span-2 p-3 flex items-center">
-          Learned Python & programming basics{" "}
-        </div>
-        <div className=" border-r text-accent relative border-text-2 h-30 flex items-center justify-end p-3 text-2xl font-semibold">
-          2023
-          <div className="w-2 h-2 bg-text rounded-3xl absolute -right-1"></div>
-        </div>
-        <div className="col-span-2 p-3 flex items-center">
-          Began NCC Education for Computing Degree{" "}
-        </div>
-        <div className=" border-r text-accent relative border-text-2 h-30 flex items-center justify-end p-3 text-2xl font-semibold">
-          2025
-          <div className="w-2 h-2 bg-text rounded-3xl absolute -right-1"></div>
-        </div>
-        <div className="col-span-2 p-3 flex items-center">
-          Finished Level 5 Diploma in Computing{" "}
-        </div>
+    <div ref={ref} id="journey" className="pb-24 pt-8">
+      <SectionHeading
+        eyebrow="Timeline"
+        title="Journey"
+        visible={visible}
+      />
+
+      <div className="relative mx-auto max-w-4xl">
+        {/* Center line */}
+        <span
+          aria-hidden
+          className="absolute bottom-3 left-5 top-3 w-0.5 -translate-x-1/2 bg-gradient-to-b from-accent via-accent/40 to-border md:left-1/2"
+        />
+
+        <ol className="space-y-10 md:space-y-14">
+          {timeline.map((item, i) => {
+            const onLeft = i % 2 === 0;
+            return (
+              <li
+                key={item.year}
+                className={`relative pl-14 md:w-1/2 md:pl-0 ${
+                  onLeft ? "md:pr-14 md:text-right" : "md:ml-auto md:pl-14"
+                }`}
+              >
+                {/* Dot on the line */}
+                <span
+                  aria-hidden
+                  className={`absolute left-5 top-2 z-10 h-3.5 w-3.5 -translate-x-1/2 rounded-full bg-accent ring-4 ring-accent/20 md:left-0 ${
+                    onLeft
+                      ? "md:left-auto md:right-0 md:translate-x-1/2"
+                      : "md:-translate-x-1/2"
+                  } ${i === timeline.length - 1 ? "ring-accent/40" : ""}`}
+                />
+
+                <article
+                  className={`rounded-2xl border border-border bg-bg-2 p-5 shadow-sm transition-all duration-700 hover:border-accent/60 hover:shadow-md md:p-6 ${
+                    visible
+                      ? "translate-y-0 opacity-100"
+                      : "translate-y-6 opacity-0"
+                  }`}
+                  style={{ transitionDelay: `${i * 80 + 200}ms` }}
+                >
+                  <span className="inline-flex items-center rounded-full border border-border bg-bg px-3 py-1 text-xs font-semibold text-accent">
+                    {item.year}
+                  </span>
+                  <h3 className="mt-3 text-base font-semibold leading-snug text-text md:text-lg">
+                    {item.title}
+                  </h3>
+                  <p className="mt-1 text-sm text-text-muted">{item.place}</p>
+                </article>
+              </li>
+            );
+          })}
+        </ol>
       </div>
     </div>
   );

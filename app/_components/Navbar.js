@@ -26,40 +26,44 @@ function Navbar() {
   }, [lastY]);
 
   return (
-    <>
-      <div
-        className={`fixed top-0 left-0 right-0 transition-transform duration-300 z-10 ${
-          show ? "translate-y-0 " : "-translate-y-full "
-        } ${
-          lastY > 100 ? " bg-white/30 backdrop-blur-sm shadow" : "bg-white"
-        } `}
+    <header
+      className={`fixed left-0 right-0 top-0 z-50 transition-transform duration-300 ${
+        show ? "translate-y-0" : "-translate-y-full"
+      }`}
+    >
+      <nav
+        className={`flex h-20 items-center justify-between px-6 text-text transition-colors md:px-12 ${
+          lastY > 24
+            ? "border-b border-border bg-white/70 shadow-sm backdrop-blur-md"
+            : "bg-white"
+        }`}
       >
-        <nav className=" h-24 flex justify-between items-center md:px-12 px-6 text-text relative z-10">
-          <h1 className="font-black text-[32px]">
-            TinHtun<span className="text-text-2">Oo.</span>
-          </h1>
-          <ul className="text-gray-500 text-[16px]  items-center justify-between font-medium w-[30%] hidden md:flex">
-            <li>
-              <Link href={"#about_me"} className="line p-2 hover:text-accent">
-                About
-              </Link>
-            </li>
-            <li>
-              <Link href={"#project"} className="line p-2 hover:text-accent">
-                Projects
-              </Link>
-            </li>
-            <li>
-              <Link href={"#journey"} className="line p-2 hover:text-accent">
-                Journey
-              </Link>
-            </li>
-          </ul>
-          <ResumeButton isMobile={false} />
-          <MobileNavbar />
-        </nav>
-      </div>
-    </>
+        <Link href="#top" className="text-[28px] font-black tracking-tight">
+          TinHtun<span className="text-accent">Oo.</span>
+        </Link>
+
+        <ul className="hidden w-[30%] items-center justify-between font-medium text-text-muted md:flex">
+          <li>
+            <Link href="#about_me" className="line p-2">
+              About
+            </Link>
+          </li>
+          <li>
+            <Link href="#project" className="line p-2">
+              Projects
+            </Link>
+          </li>
+          <li>
+            <Link href="#journey" className="line p-2">
+              Journey
+            </Link>
+          </li>
+        </ul>
+
+        <ResumeButton isMobile={false} />
+        <MobileNavbar />
+      </nav>
+    </header>
   );
 }
 

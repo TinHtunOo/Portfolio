@@ -8,15 +8,16 @@ import SomeWorkSection from "./_components/SomeWorkSection";
 
 export default function Home() {
   return (
-    <div className="max-w-275 mx-auto sm:px-10 px-2 overflow-hidden">
-      <HeroSection />
-      <ProjectsSection />
-      <FreelanceProject />
-      <AboutMeSection />
-
-      <SomeWorkSection />
-      <JourneySection />
+    <main>
+      <div className="max-w-275 mx-auto overflow-hidden px-2 sm:px-10">
+        <HeroSection />
+        <ProjectsSection />
+        <FreelanceProject />
+        <AboutMeSection />
+        <SomeWorkSection />
+        <JourneySection />
+      </div>
       <Footer />
-    </div>
+    </main>
   );
 }

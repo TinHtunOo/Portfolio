@@ -1,7 +1,6 @@
 import "@/app/_styles/globals.css";
 import { Inter_Tight } from "next/font/google";
 import Navbar from "./_components/Navbar";
-import "animate.css";
 import "./_styles/globals.css";
 
 const inter = Inter_Tight({

@@ -2,6 +2,7 @@
 import useInView from "../_hooks/useInView";
 import metroImg from "@/public/metro-security.png";
 import FreelanceProject from "./FreelenceProject";
+import SectionHeading from "./SectionHeading";
 
 const projects = [
   {
@@ -22,19 +23,12 @@ function FreelanceSection() {
   const { ref, visible } = useInView();
 
   return (
-    <section
-      ref={ref}
-      className={`py-20 animate__animated ${
-        visible ? "animate__fadeInUp" : "opacity-0"
-      }`}
-    >
-      {/* Section Header */}
-      <div className="mb-12">
-        <h2 className="text-text text-3xl font-bold mt-3 leading-tight">
-          Freelance Projects
-        </h2>
-        <div className="mt-4 h-px w-16 bg-accent rounded-full" />
-      </div>
+    <section ref={ref} className="pb-16 pt-8">
+      <SectionHeading
+        eyebrow="Client Work"
+        title="Freelance Projects"
+        visible={visible}
+      />
 
       {/* Project Cards */}
       <div className="flex flex-col gap-8">

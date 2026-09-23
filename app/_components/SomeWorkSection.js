@@ -1,6 +1,7 @@
 "use client";
-import { ExternalLink, Github } from "lucide-react";
+import { ArrowUpRight, ExternalLink, Github } from "lucide-react";
 import useInView from "../_hooks/useInView";
+import SectionHeading from "./SectionHeading";
 
 const projects = [
   {
@@ -49,40 +50,39 @@ function SomeWorkSection() {
   const { ref, visible } = useInView();
 
   return (
-    <div ref={ref} className="pt-15 pb-15">
-      <h1
-        className={`text-3xl font-bold mb-10 text-center animate__animated ${
-          visible ? "animate__fadeIn" : "opacity-0"
-        }`}
-      >
-        Some of My Work
-      </h1>
+    <div ref={ref} className="pb-24 pt-8">
+      <SectionHeading
+        eyebrow="More Work"
+        title="Some of My Work"
+        visible={visible}
+      />
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-10 mb-15">
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
         {projects.map((project, index) => (
           <div
-            key={index}
-            className={`flex flex-col p-5 bg-bg rounded-2xl border border-accent hover:shadow-md transition-colors animate__animated ${
-              visible ? `animate__fadeIn animate__delay-${index}s` : "opacity-0"
+            key={project.name}
+            style={{ transitionDelay: `${index * 60}ms` }}
+            className={`group flex flex-col rounded-2xl border border-border bg-bg p-5 shadow-sm transition-all duration-500 hover:-translate-y-1 hover:shadow-lg ${
+              visible ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0"
             }`}
           >
             {/* Header */}
-            <div className="flex items-start justify-between mb-2">
-              <h2 className="text-[17px] font-medium">{project.name}</h2>
-              <span className="text-xs text-text-muted">0{index + 1}</span>
+            <div className="mb-2 flex items-start justify-between">
+              <h2 className="text-[17px] font-semibold">{project.name}</h2>
+              <span className="text-sm text-text-2">0{index + 1}</span>
             </div>
 
             {/* Description */}
-            <p className="text-text-muted text-[13px] leading-relaxed flex-1 mb-4">
+            <p className="mb-4 flex-1 text-[13px] leading-relaxed text-text-muted">
               {project.description}
             </p>
 
             {/* Tech stack */}
-            <div className="flex gap-2 flex-wrap mb-5">
+            <div className="mb-5 flex flex-wrap gap-2">
               {project.techStack.map((tech) => (
                 <span
                   key={tech}
-                  className="text-[11px] px-2 py-1 rounded-full bg-bg-1 border border-border text-text-muted"
+                  className="rounded-full border border-border bg-bg-1 px-2.5 py-1 text-[11px] text-text-muted"
                 >
                   {tech}
                 </span>
@@ -90,12 +90,12 @@ function SomeWorkSection() {
             </div>
 
             {/* Links */}
-            <div className="flex gap-2 border-t border-border pt-4">
+            <div className="flex items-center gap-2 border-t border-border pt-4">
               <a
                 href={project.liveLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-1.5 text-xs font-medium px-3 py-1.5 rounded-lg bg-text text-bg-2 hover:opacity-85 transition-opacity"
+                className="flex items-center gap-1.5 rounded-lg bg-text px-3 py-1.5 text-xs font-medium text-white transition hover:bg-accent"
               >
                 <ExternalLink size={12} /> Live demo
               </a>
@@ -103,9 +103,21 @@ function SomeWorkSection() {
                 href={project.gitLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-1.5 text-xs font-medium px-3 py-1.5 rounded-lg border border-text hover:bg-bg transition-colors"
+                className="flex items-center gap-1.5 rounded-lg border border-border px-3 py-1.5 text-xs font-medium text-text transition hover:border-accent hover:text-accent"
               >
                 <Github size={12} /> Source
+              </a>
+              <a
+                href={project.liveLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`Open ${project.name} in a new tab`}
+                className="ml-auto flex h-8 w-8 items-center justify-center rounded-lg text-text-2 transition hover:bg-accent hover:text-white"
+              >
+                <ArrowUpRight
+                  size={16}
+                  className="transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+                />
               </a>
             </div>
           </div>
