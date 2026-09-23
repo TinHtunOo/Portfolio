@@ -27,6 +27,9 @@ function ResumeButton({ isMobile = true }) {
         }
       }
     }
+    return () => {
+      document.body.style.overflow = isMobile ? "hidden" : "auto";
+    };
   }, [open]);
 
   return (

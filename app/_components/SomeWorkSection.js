@@ -44,6 +44,14 @@ const projects = [
     liveLink: "https://auth-system-omega-ecru.vercel.app/",
     gitLink: "https://github.com/TinHtunOo/Auth-System",
   },
+  {
+    name: "Blackjack",
+    description:
+      "A blackjack game with a hand-built rules engine (deck, hand values, splits, double downs, dealer), and per-session play so multiple people can play independently. ",
+    techStack: ["React", "Tailwind", "Node.js", "Express"],
+    liveLink: "https://blackjack-v1999.vercel.app/",
+    gitLink: "https://github.com/TinHtunOo/Blackjack_V1",
+  },
 ];
 
 function SomeWorkSection() {
